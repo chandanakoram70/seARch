@@ -1,0 +1,19 @@
+[
+    { "id": "f1_entrance", "name": "Main Entrance", "floor": 1, "pos": { "x": 44, "y": 0, "z": 127.800003 } },
+    { "id": "f1_salty_seagull", "name": "The Salty Seagull Cafe", "floor": 1, "pos": { "x": 106.699997, "y": 0, "z": 130.300003 } },
+    { "id": "f1_circulation_desk", "name": "Circulation Desk", "floor": 1, "pos": { "x": 64.5, "y": 0, "z": 92.6999969 } },
+    { "id": "f1_service_desk", "name": "Service Desk (Atrium)", "floor": 1, "pos": { "x": 11.1999998, "y": 0, "z": -14.3000002 } },
+    { "id": "f1_access_services", "name": "Access Services (102A)", "floor": 1, "pos": { "x": 103.300003, "y": 0, "z": 68.1999969 } },
+    { "id": "f1_grow_suite", "name": "GROW Suite", "floor": 1, "pos": { "x": 87.0999985, "y": 0, "z": -26.7000008 } },
+    { "id": "f1_computer_lab", "name": "Computer Lab (109)", "floor": 1, "pos": { "x": 158.300003, "y": 0, "z": -104.5 } },
+    { "id": "f1_study_space", "name": "Study Space (108)", "floor": 1, "pos": { "x": 137.100006, "y": 0, "z": -70.6999969 } },
+    { "id": "f1_learning_commons", "name": "Learning Commons", "floor": 1, "pos": { "x": -89.9000015, "y": 0, "z": -102 } },
+    { "id": "f1_classroom", "name": "Active Learning Classroom (126)", "floor": 1, "pos": { "x": -152.800003, "y": 0, "z": -156.100006 } },
+    { "id": "f1_periodicals", "name": "Periodicals Collection", "floor": 1, "pos": { "x": -131.899994, "y": 0, "z": 78 } },
+    { "id": "f1_daily_read_cafe", "name": "The Daily Read Cafe (120)", "floor": 1, "pos": { "x": -50.5, "y": 0, "z": 105.400002 } },
+    { "id": "f1_restrooms_south", "name": "Restrooms (South)", "floor": 1, "pos": { "x": -11.3000002, "y": 0, "z": 94.5999985 }, "type": "amenity" },
+    { "id": "f1_restrooms_north", "name": "Restrooms (North)", "floor": 1, "pos": { "x": -50.0999985, "y": 0, "z": -96.5 }, "type": "amenity" },
+    { "id": "f1_stairs_main", "name": "Stairs (Main Atrium)", "floor": 1, "pos": { "x": -27.2999992, "y": 0, "z": 58.5999985 }, "type": "connector", "connectsTo": ["f2_stairs_main"] },
+    { "id": "f1_stairs_west", "name": "Stairs (West)", "floor": 1, "pos": { "x": 104.400002, "y": 0, "z": 0.899999976 }, "type": "connector", "connectsTo": ["f2_stairs_west"] },
+    { "id": "f1_elevators", "name": "Elevators", "floor": 1, "pos": { "x": 88.1999969, "y": 0, "z": -0.600000024 }, "type": "connector", "connectsTo": ["f2_elevators"] }
+]

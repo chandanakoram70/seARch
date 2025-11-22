@@ -1,0 +1,17 @@
+[
+    { "id": "f2_icreate_lab", "name": "I-Create Lab (217)", "floor": 2, "pos": { "x": -77.1999969, "y": -80.6999969, "z": -242.699997 } },
+    { "id": "f2_systems_216", "name": "Systems (216)", "floor": 2, "pos": { "x": -15, "y": 10, "z": 15 } },
+    { "id": "f2_archives", "name": "Archives (218)", "floor": 2, "pos": { "x": 0, "y": 10, "z": 20 } },
+    { "id": "f2_immersive_lab", "name": "Immersive Reality Lab (220A)", "floor": 2, "pos": { "x": 5, "y": 10, "z": 28 } },
+    { "id": "f2_group_study", "name": "Group Study", "floor": 2, "pos": { "x": 15, "y": 10, "z": 20 } },
+    { "id": "f2_main_collection", "name": "Main Collection", "floor": 2, "pos": { "x": 20, "y": 10, "z": 0 } },
+    { "id": "f2_media_collection", "name": "Media Collection", "floor": 2, "pos": { "x": 30, "y": 10, "z": 20 } },
+    { "id": "f2_special_collections", "name": "Special Collections", "floor": 2, "pos": { "x": -5, "y": 10, "z": -10 } },
+    { "id": "f2_conference_room", "name": "Conference Room (208)", "floor": 2, "pos": { "x": -15, "y": 10, "z": 0 } },
+    { "id": "f2_service_desk", "name": "Service Desk (Floor 2)", "floor": 2, "pos": { "x": 10, "y": 10, "z": -5 } },
+    { "id": "f2_restrooms_north", "name": "Restrooms (North)", "floor": 2, "pos": { "x": 10, "y": 10, "z": 18 }, "type": "amenity" },
+    { "id": "f2_restrooms_south", "name": "Restrooms (South)", "floor": 2, "pos": { "x": 5, "y": 10, "z": -8 }, "type": "amenity" },
+    { "id": "f2_stairs_main", "name": "Stairs (Main Atrium)", "floor": 2, "pos": { "x": 2, "y": 10, "z": -8 }, "type": "connector", "connectsTo": ["f1_stairs_main"] },
+    { "id": "f2_stairs_west", "name": "Stairs (West)", "floor": 2, "pos": { "x": -18, "y": 10, "z": 5 }, "type": "connector", "connectsTo": ["f1_stairs_west"] },
+    { "id": "f2_elevators", "name": "Elevators", "floor": 2, "pos": { "x": 10, "y": 10, "z": 15 }, "type": "connector", "connectsTo": ["f1_elevators"] }
+]
