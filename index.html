@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>seARch - Indoor Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="html5-qrcode.min.js"></script>
+</head>
+<body>
+
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="main-container" class="container">
+        <header>
+            <h1>seARch 🗺️</h1>
+            <p>Augmented Reality Indoor Navigation</p>
+        </header>
+
+        <main class="navigation-form">
+            <div class="form-group">
+                <label for="floor-select">🏢 Current Floor</label>
+                <select id="floor-select">
+                    <option value="1">Floor 1</option>
+                    <option value="2">Floor 2</option>
+                    <option value="test_area">Test Area</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="source-location">📍 Starting Location</label>
+                <select id="source-location">
+                    <option value="">Loading locations...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="destination-location">🏁 Destination</label>
+                <select id="destination-location">
+                    <option value="">Loading locations...</option>
+                </select>
+            </div>
+            <button id="calculate-path-button">Calculate Path</button>
+            <button id="scan-qr-button" style="margin-top:12px;">Scan QR to Set Source</button>
+        </main>
+
+        <div id="results-container"></div>
+
+        <div id="path-preview" class="hidden">
+            <h3>📍 Route Found</h3>
+            <p id="path-description"></p>
+            <div id="path-details"></div>
+            <button id="start-ar-button">Start AR Navigation</button>
+        </div>
+    </div>
+
+    <div id="ar-container" class="ar-view hidden">
+        <div id="ar-instructions">Follow the path to your destination</div>
+        <div id="ar-overlay">
+            <canvas id="ar-canvas"></canvas>
+        </div>
+        <div id="distance-info">Calculating distance...</div>
+        <div id="step-counter" style="display: none;">Steps: 0</div>
+
+        <div id="test-controls">
+            <button id="enable-test-mode">Enable Test Mode</button>
+            <div id="rotation-controls" style="display: none;">
+                <button id="rotate-left">← Rotate Left</button>
+                <button id="rotate-right">Rotate Right →</button>
+                <span id="test-heading">0°</span>
+            </div>
+            <div id="movement-controls" style="display: none;">
+                <button id="walk-forward">🚶 Walk Forward (5m)</button>
+                <span id="waypoint-info">Waypoint 0/0</span>
+            </div>
+        </div>
+        
+        <button id="exit-ar-button">Exit AR View</button>
+    </div>
+
+    <div id="qr-scanner-modal" class="qr-modal">
+        <div class="qr-modal-content">
+            <div id="qr-reader" style="width:100%"></div>
+            <div class="qr-modal-actions">
+                <button id="close-qr-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

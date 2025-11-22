@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #007aff;
+    --background-color: #f0f2f5;
+    --container-bg: #ffffff;
+    --text-color: #1c1c1e;
+    --subtle-text-color: #6d6d72;
+    --border-color: #c6c6c8;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --success-color: #34c759;
+    --error-color: #ff3b30;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+#main-container {
+    background-color: var(--container-bg);
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin: 0 0 4px 0;
+}
+
+header p {
+    font-size: 1rem;
+    color: var(--subtle-text-color);
+    margin: 0 0 28px 0;
+}
+
+.navigation-form .form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #fdfdff;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+.form-group select option {
+    padding: 8px;
+    color: var(--text-color);
+    background-color: white;
+}
+
+.form-group select optgroup {
+    font-weight: bold;
+    color: var(--subtle-text-color);
+}
+
+.form-group select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#navigate-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+#navigate-button:hover {
+    background-color: #0056b3;
+}
+#scan-qr-button {
+    background-color: #e9e9eb;
+    color: var(--text-color);
+    margin-top: 12px;
+}
+#scan-qr-button:hover {
+    background-color: #dcdce0;
+}
+
+#results-container {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: var(--subtle-text-color);
+    min-height: 20px;
+    font-weight: 500;
+}
+
+/* Path Preview Section */
+#path-preview {
+    margin-top: 24px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid var(--primary-color);
+}
+
+#path-preview h3 {
+    margin: 0 0 12px 0;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+#path-description {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 8px 0;
+}
+
+#path-details {
+    margin: 12px 0;
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+}
+
+#path-details p {
+    margin: 8px 0;
+}
+
+#start-ar-button {
+    width: 100%;
+    margin-top: 16px;
+    background-color: var(--success-color);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#start-ar-button:hover {
+    background-color: #28a745;
+}
+
+/* Loading Spinner */
+#loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+#loading-overlay.hidden {
+    display: none !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* AR View Styles */
+.ar-view {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 100;
+    background-color: #000;
+}
+
+#ar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#ar-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#exit-ar-button {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 102;
+    width: auto;
+    padding: 12px 25px;
+    background-color: rgba(255, 50, 50, 0.9);
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+#ar-instructions {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#distance-info {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+    background-color: rgba(0, 123, 255, 0.9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white;
+}
+
+#step-counter {
+    position: fixed;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+    background-color: rgba(0, 200, 100, 0.9);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white;
+    font-family: monospace;
+}
+
+/* Test Controls */
+#test-controls {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#test-controls button {
+    background-color: rgba(255, 165, 0, 0.9);
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#test-controls button:hover {
+    background-color: rgba(255, 140, 0, 0.9);
+}
+
+#rotation-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 165, 0, 0.5);
+}
+
+#movement-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 200, 100, 0.5);
+}
+
+#waypoint-info {
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+#test-heading {
+    color: white;
+    font-weight: bold;
+    min-width: 50px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+/* QR Scanner Modal */
+.qr-modal {
+    position: fixed; inset: 0; display: none; align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.6); z-index: 200;
+}
+.qr-modal-content {
+    width: 90%; max-width: 480px; background: #fff; border-radius: 12px; padding: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.qr-modal-actions { text-align: right; margin-top: 8px; }
+
+.hidden { display: none; }
