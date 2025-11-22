@@ -1,0 +1,6 @@
+[
+    { "id": "test_area_desk", "name": "Location near Desk", "floor": "test_area", "pos": { "x": -3.33, "y": 0, "z": -7.01 } },
+    { "id": "test_area_print", "name": "Location near Print", "floor": "test_area", "pos": { "x": 5.57, "y": 0, "z": -7.09 } },
+    { "id": "test_area_computer", "name": "Location near ComputerLab", "floor": "test_area", "pos": { "x": 7.07, "y": 0, "z": 9.87 } },
+    { "id": "test_area_magazine", "name": "Location near Magazines", "floor": "test_area", "pos": { "x": -1.38, "y": 0, "z": 6.75 } }
+]
